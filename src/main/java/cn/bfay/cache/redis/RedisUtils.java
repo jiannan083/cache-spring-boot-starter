@@ -9,7 +9,7 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
 import org.springframework.data.redis.core.BoundHashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -37,11 +37,11 @@ public class RedisUtils {
     public RedisUtils() {
     }
 
-    private static RedisConnectionFactory factory;
+    private static LettuceConnectionFactory factory;
 
     @Autowired
-    public void setFactory(RedisConnectionFactory factory) {
-        RedisUtils.factory = factory;
+    public void setFactory(LettuceConnectionFactory connectionFactory) {
+        RedisUtils.factory = connectionFactory;
     }
 
     private static StringRedisTemplate stringRedisTemplate;

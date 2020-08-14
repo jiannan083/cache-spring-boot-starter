@@ -19,3 +19,4 @@ Step 2. Add the dependency
 ```
 ## 2.0.4
 基于springboot 2.1.6.RELEASE  
+说明：缓存starter;使用lettuce连接  
