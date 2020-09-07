@@ -52,7 +52,7 @@ public class RedisUtils {
         RedisUtils.stringRedisTemplate = stringRedisTemplate;
     }
 
-    private static ObjectMapper mapper = new ObjectMapper();
+    private static final ObjectMapper mapper = new ObjectMapper();
     private static RedisTemplate<String, Object> template;
 
     @PostConstruct
@@ -156,7 +156,7 @@ public class RedisUtils {
      * @param <T>  类型
      * @return 返回转换后的类型
      */
-    public static <T> T getValue(String key, TypeReference type) {
+    public static <T> T getValue(String key, TypeReference<T> type) {
         String originValue = getValue(key);
         if (originValue == null) {
             return null;
@@ -338,7 +338,7 @@ public class RedisUtils {
      * @param <T>  类型
      * @return 返回map
      */
-    public static <T> Map<String, T> mapGetMap(String key, TypeReference type) {
+    public static <T> Map<String, T> mapGetMap(String key, TypeReference<T> type) {
 
         Map<String, T> resultMap = new HashMap<>();
         mapGetMap(key).forEach((key1, value) -> {
@@ -393,7 +393,7 @@ public class RedisUtils {
      * @param <T>   类型
      * @return 返回转换后的类型
      */
-    public static <T> T mapGetValue(String key, String field, TypeReference type) {
+    public static <T> T mapGetValue(String key, String field, TypeReference<T> type) {
         Object originValue = mapGetValue(key, field);
         if (originValue == null) {
             return null;
