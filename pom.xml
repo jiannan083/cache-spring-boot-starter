@@ -11,7 +11,7 @@
     </parent>
     <groupId>cn.bfay</groupId>
     <artifactId>cache-spring-boot-starter</artifactId>
-    <version>2.0.0</version>
+    <version>2.1.0</version>
     <name>cache-spring-boot-starter</name>
     <description>cache project for Spring Boot</description>
 
