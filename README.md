@@ -17,10 +17,6 @@ Step 2. Add the dependency
 	    <version>Tag</version>
 	</dependency>
 ```
-## 1.1.0
-基于springboot 2.1.6.RELEASE  
-说明：缓存starter;使用lettuce连接  
-
-## 2.0.0
+## 2.1.0
 基于springboot 2.3.2.RELEASE  
 说明：缓存starter;使用lettuce连接  
