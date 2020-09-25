@@ -12,7 +12,7 @@ import java.util.Random;
  * @since 2020/1/7
  */
 public class RedisLock {
-    private static Logger log = LoggerFactory.getLogger(RedisLock.class);
+    private static final Logger log = LoggerFactory.getLogger(RedisLock.class);
 
     // 毫秒
     private static final long TRY_INTERVAL_MILLIS = 100;
